@@ -30,6 +30,10 @@ jobs:
     - name: Create environment
       run: conda create -n myenv python=3.9
 
+    - name: Init Conda
+      run: conda init bash
+
+      
     - name: Activate environment
       run: conda activate myenv
 
