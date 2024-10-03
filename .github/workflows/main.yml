@@ -27,16 +27,14 @@ jobs:
         miniconda-version: 'latest'
         python-version: 3.9
 
+    - name: Initialize Conda
+      run: conda init bash
+
     - name: Create environment
       run: conda create -n myenv python=3.9
 
-    - name: Init Conda
-      run: conda init bash
-      
-    - name: reconnect bash
-      run: /bin/bash
-      
     - name: Activate environment
+      shell: bash -l {0}
       run: conda activate myenv
 
     - name: Verify Python version
