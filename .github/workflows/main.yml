@@ -32,7 +32,9 @@ jobs:
 
     - name: Init Conda
       run: conda init bash
-
+      
+    - name: reconnect bash
+      run: /bin/bash
       
     - name: Activate environment
       run: conda activate myenv
